@@ -11,6 +11,11 @@ export default function Chat() {
 
       <main className={styles.main}>
         <h1>Chat</h1>
+        <div className={styles.display}></div>
+        <div className={styles.submitMessage}>
+          <input type="text" className={styles.message}></input>
+          <button className={styles.button}>SEND</button>
+        </div>
       </main>
 
       <footer className={styles.footer}>
