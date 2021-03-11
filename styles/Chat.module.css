@@ -21,6 +21,7 @@
   height: 15em;
   border: solid;
   overflow: auto;
+  padding: 0 1em;
 }
 
 .submitMessage {
@@ -35,12 +36,10 @@
 
 .userMessage {
   color: blueviolet;
-  text-align: left;
 }
 
 .botResponse {
   color: tomato;
-  text-align: right;
 }
 
 .footer {
