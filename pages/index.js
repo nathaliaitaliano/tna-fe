@@ -6,7 +6,7 @@ export default function Chat() {
 
   const [history, setHistory] = useState(["Hello, type something"])
   const [currentMessage, setCurrentMessage] = useState("")
-  const messageHistory = history.map((msg, index) => <p key={index} className={index % 2 == 0 ? styles.leftMessage : styles.rightMessage}>{msg}</p>)
+  const messageHistory = history.map((msg, index) => <p key={index} className={index % 2 == 0 ? styles.userMessage : styles.botResponse}>{msg}</p>)
 
   const updateHistory = () => {
     setHistory([...history, currentMessage])

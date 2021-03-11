@@ -33,12 +33,12 @@
   width: 100%;
 }
 
-.leftMessage {
+.userMessage {
   color: blueviolet;
   text-align: left;
 }
 
-.rightMessage {
+.botResponse {
   color: tomato;
   text-align: right;
 }
