@@ -20,6 +20,7 @@
   height: 15em;
   border: solid;
   overflow: auto;
+  overflow-wrap: break-word;
   padding: 0 1em;
   scroll-behavior: smooth;
   scroll-margin-block-end: 3px;
