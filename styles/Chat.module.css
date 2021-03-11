@@ -20,6 +20,7 @@
   width: 25em;
   height: 15em;
   border: solid;
+  overflow: auto;
 }
 
 .submitMessage {
