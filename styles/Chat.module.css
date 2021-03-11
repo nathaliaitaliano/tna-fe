@@ -32,6 +32,16 @@
   width: 100%;
 }
 
+.leftMessage {
+  color: blueviolet;
+  text-align: left;
+}
+
+.rightMessage {
+  color: tomato;
+  text-align: right;
+}
+
 .footer {
   width: 100%;
   height: 100px;
