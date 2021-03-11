@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import { useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import styles from '../styles/Chat.module.css'
 
 export default function Chat() {
 
   const [history, setHistory] = useState(["Hello, type something"])
   const [currentMessage, setCurrentMessage] = useState("")
+  const chatBottom = useRef(null)
   const messageHistory = history.map((msg, index) => <p key={index} className={index % 2 == 0 ? styles.userMessage : styles.botResponse}>{msg}</p>)
 
   const updateHistory = () => {
@@ -19,6 +20,10 @@ export default function Chat() {
     }
   }
 
+  useEffect(() => {
+    chatBottom.current?.scrollIntoView({ behavior: "smooth" })
+  }, [history]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,6 +34,7 @@ export default function Chat() {
         <h1>Chat</h1>
         <div className={styles.display}>
           {messageHistory}
+          <div ref={chatBottom}></div>
         </div>
         <div className={styles.submitMessage}>
           <input id="inputMessage" type="text" autocomplete="off" value={currentMessage} className={styles.message} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
