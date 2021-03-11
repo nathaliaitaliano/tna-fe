@@ -1,14 +1,13 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #8a2be2;
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -22,6 +21,10 @@
   border: solid;
   overflow: auto;
   padding: 0 1em;
+  scroll-behavior: smooth;
+  scroll-margin-block-end: 3px;
+  background-color: #FFFFFF;
+  border: 1px solid #8a2be2;
 }
 
 .submitMessage {
@@ -30,12 +33,22 @@
   justify-content: space-between;
 }
 
-.message {
+.inputMessage {
   width: 100%;
+  border: 1px solid #8a2be2;
+  outline: none;
+}
+
+.btnSendMessage {
+  border: 1px solid #8a2be2;
+  background-color: #4dffa6;
+  color: #8a2be2;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .userMessage {
-  color: blueviolet;
+  color: #8a2be2;
 }
 
 .botResponse {
