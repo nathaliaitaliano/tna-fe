@@ -23,7 +23,6 @@ export default function Chat() {
     <div className={styles.container}>
       <Head>
         <title>TNA</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -32,7 +31,7 @@ export default function Chat() {
           {messageHistory}
         </div>
         <div className={styles.submitMessage}>
-          <input id="inputMessage" type="text" value={currentMessage} className={styles.message} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
+          <input id="inputMessage" type="text" autocomplete="off" value={currentMessage} className={styles.message} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
           <button id="btnSendMessage" className={styles.button} onClick={updateHistory}>SEND</button>
         </div>
       </main>
