@@ -13,6 +13,12 @@ export default function Chat() {
     setCurrentMessage("")
   }
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      updateHistory();
+    }
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -26,8 +32,8 @@ export default function Chat() {
           {messageHistory}
         </div>
         <div className={styles.submitMessage}>
-          <input type="text" value={currentMessage} className={styles.message} onChange={e => setCurrentMessage(e.target.value)}></input>
-          <button className={styles.button} onClick={updateHistory}>SEND</button>
+          <input id="inputMessage" type="text" value={currentMessage} className={styles.message} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
+          <button id="btnSendMessage" className={styles.button} onClick={updateHistory}>SEND</button>
         </div>
       </main>
 
