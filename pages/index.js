@@ -16,7 +16,7 @@ export default function Chat() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>TNA Chat</title>
+        <title>TNA</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
