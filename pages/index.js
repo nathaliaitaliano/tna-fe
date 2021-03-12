@@ -36,7 +36,7 @@ export default function Chat() {
           <div ref={chatBottom}></div>
         </div>
         <div className={styles.submitMessage}>
-          <input className={styles.inputMessage} type="text" autocomplete="off" value={currentMessage} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
+          <input className={styles.inputMessage} type="text" autoComplete="off" value={currentMessage} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
           <button className={styles.btnSendMessage} onClick={updateHistory}>SEND</button>
         </div>
       </main>
