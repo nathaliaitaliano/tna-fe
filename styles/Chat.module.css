@@ -55,3 +55,13 @@
 .botResponse {
   color: tomato;
 }
+
+.footer {
+  opacity: 0.5;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+
+.footer span {
+  color: #4dffa6;
+}
