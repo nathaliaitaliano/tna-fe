@@ -31,13 +31,15 @@ export default function Chat() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.display}>
-          {messageHistory}
-          <div ref={chatBottom}></div>
-        </div>
-        <div className={styles.submitMessage}>
-          <input className={styles.inputMessage} type="text" autoComplete="off" value={currentMessage} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
-          <button className={styles.btnSendMessage} onClick={updateHistory}>SEND</button>
+        <div className={styles.chatBot}>
+          <div className={styles.display}>
+            {messageHistory}
+            <div ref={chatBottom}></div>
+          </div>
+          <div className={styles.submitMessage}>
+            <input className={styles.inputMessage} type="text" autoComplete="off" value={currentMessage} onKeyPress={handleKeyPress} onChange={e => setCurrentMessage(e.target.value)}></input>
+            <button className={styles.btnSendMessage} onClick={updateHistory}>SEND</button>
+          </div>
         </div>
       </main>
 
