@@ -16,8 +16,8 @@
 }
 
 .display {
-  width: 25em;
-  height: 15em;
+  width: 40em;
+  height: 30em;
   border: solid;
   overflow: auto;
   overflow-wrap: break-word;
@@ -30,13 +30,19 @@
 
 .submitMessage {
   display: flex;
-  width: 25em;
+  width: 40em;
+  height: 2em;
+  
   justify-content: space-between;
+  
 }
 
 .inputMessage {
   width: 100%;
+  padding: 0 1em;
   border: 1px solid #8a2be2;
+  font-size: 16px;
+  color: #8a2be2;
   outline: none;
 }
 
@@ -59,7 +65,7 @@
 .footer {
   opacity: 0.5;
   color: #FFFFFF;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .footer span {
