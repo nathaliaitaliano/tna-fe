@@ -30,20 +30,20 @@
   scroll-behavior: smooth;
   scroll-margin-block-end: 3px;
   background-color: #FFFFFF;
-  border: 1px solid #8a2be2;
+  border: 2px solid #8a2be2;
 }
 
 .submitMessage {
   display: flex;
   width: 40em;
-  height: 2em;
+  height: 2.5em;
   justify-content: space-between;
 }
 
 .inputMessage {
   width: 100%;
   padding: 0 1em;
-  border: 1px solid #8a2be2;
+  border: 2px solid #8a2be2;
   font-size: 16px;
   color: #8a2be2;
   outline: none;
@@ -60,7 +60,7 @@
 
 .btnSendMessage {
   width: 6em;
-  border: 1px solid #8a2be2;
+  border: 2px solid #8a2be2;
   background-color: #4dffa6;
   color: #8a2be2;
   font-size: 16px;
