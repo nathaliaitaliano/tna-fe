@@ -6,7 +6,9 @@ const reducer = (state, action) => {
     case 'messageUpdated':
       return { ...state, currentMessage: action.message }
     case 'messageSubmitted':
-      return { history: [...state.history, action.message], currentMessage: "" }
+      return { ...state, history: [...state.history, action.message], currentMessage: "" }
+    case 'botResponseArrived':
+      return { ...state, history: [...state.history, action.response]}
   }
 }
 
@@ -18,6 +20,7 @@ export default function Chat() {
 
   const submitMessage = () => {
     dispatch({ type: 'messageSubmitted', message: state.currentMessage })
+    dispatch({ type: 'botResponseArrived', response: `From bot: ${state.currentMessage}`})
   }
 
   const handleKeyPress = (event) => event.key === "Enter" && submitMessage()
