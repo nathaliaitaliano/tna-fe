@@ -38,9 +38,14 @@
   border: 2px solid #8a2be2;
   background-color: #4dffa6;
   color: #8a2be2;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.btnSendMessage:hover {
+  background-color: #9affcd;
+  transition: 0.5s;
 }
 
 .sendIcon {
