@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, useReducer } from 'react';
 import styles from './chat.module.css'
+import bot from '../../lib/botApi'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -20,7 +21,9 @@ export default function Chat() {
 
   const submitMessage = () => {
     dispatch({ type: 'messageSubmitted', message: state.currentMessage })
-    dispatch({ type: 'botResponseArrived', response: `From bot: ${state.currentMessage}`})
+    bot.submmitMessage(state.currentMessage).then(answer => {
+      dispatch({ type: 'botResponseArrived', response: answer })
+    })
   }
 
   const submitMessageOnEnter = (event) => event.key === "Enter" && submitMessage()
