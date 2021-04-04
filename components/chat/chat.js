@@ -23,7 +23,7 @@ export default function Chat() {
     dispatch({ type: 'botResponseArrived', response: `From bot: ${state.currentMessage}`})
   }
 
-  const handleKeyPress = (event) => event.key === "Enter" && submitMessage()
+  const submitMessageOnEnter = (event) => event.key === "Enter" && submitMessage()
 
   useEffect(() => {
     chatBottom.current?.scrollIntoView({ behavior: "smooth" })
@@ -36,7 +36,7 @@ export default function Chat() {
         <div ref={chatBottom}></div>
       </div>
       <div className={styles.submitMessage}>
-        <input className={styles.inputMessage} type="text" autoComplete="off" value={state.currentMessage} onKeyPress={handleKeyPress} onChange={e => dispatch({ type: 'messageUpdated', message: e.target.value })} ></input>
+        <input className={styles.inputMessage} type="text" autoComplete="off" value={state.currentMessage} onKeyPress={submitMessageOnEnter} onChange={e => dispatch({ type: 'messageUpdated', message: e.target.value })} ></input>
         <button className={styles.btnSendMessage} onClick={submitMessage}>SEND <i className={styles.sendIcon}></i></button>
       </div>
     </div>
