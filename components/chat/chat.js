@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useReducer } from 'react';
+import { useEffect, useRef, useReducer } from 'react';
 import styles from './chat.module.css'
 import bot from '../../lib/botApi'
 
