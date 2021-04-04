@@ -19,11 +19,10 @@ export default function Chat() {
   const chatBottom = useRef(null)
   const messageHistory = state.history.map((msg, index) => <p key={index} className={index % 2 == 0 ? styles.userMessage : styles.botResponse}>{msg}</p>)
 
-  const submitMessage = () => {
+  const submitMessage = async () => {
     dispatch({ type: 'messageSubmitted', message: state.currentMessage })
-    bot.submmitMessage(state.currentMessage).then(answer => {
-      dispatch({ type: 'botResponseArrived', response: answer })
-    })
+    const answer = await bot.submmitMessage(state.currentMessage)
+    dispatch({ type: 'botResponseArrived', response: answer })
   }
 
   const submitMessageOnEnter = (event) => event.key === "Enter" && submitMessage()
